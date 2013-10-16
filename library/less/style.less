@@ -121,3 +121,144 @@ be set to display none.
 
 } // end of media query
 
+article[role='article'].post {
+	a {
+		color: black;
+	}
+
+	.thumbnail {
+		
+		float: left;
+		width: 200px;
+		img {
+			height: 200px;
+			width: 200px;
+		}
+	}
+	.body {
+		float: left;
+		width: 540px;
+		padding-left:20px;
+		.category {
+			margin: 0px;
+			font-size: 14px;
+			color: #87867f;
+			a {
+				background: @background-gray;
+				padding:5px;
+			}
+		}
+		.title {
+			margin:0px;
+			font-size: 24px;
+		}
+		.author {
+			margin:0px;
+			font-size: 14px;
+		}
+		.content {
+			margin:0px;
+			p {
+				margin: 0px;
+			}
+		}
+	}
+}
+
+.sidebar {
+	a {
+		color: black;
+		font-family: 'ProximaNova Regular';
+		text-decoration: none;
+	}
+
+	.widgettitle {
+		font-size: 24px;
+		color: @green;
+		border-bottom: 1px solid @border-gray;
+		text-transform:uppercase;
+	}
+	ul {
+		list-style-image: url('../images/list-arrow.png');
+		li {
+			margin-left:15px;
+			margin-bottom:0px;
+		}
+	}
+}
+.bg {
+	width: 100%;
+	z-index: 0;
+	
+}
+
+div.search {
+	position:relative;
+	margin-top:-100px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	.search-field {
+		background: rgba(255, 255, 255, 0.25) url('../images/search-icon.png') right no-repeat;
+		color: white;
+		font-style:italic;
+		font-family:'Times Italic';
+		border: 1px solid @border-gray;
+		font-size:18px;
+		padding: 10px;
+		&::-webkit-input-placeholder {
+			color: white;
+			font-style:italic;
+			font-family:'Times Italic';
+		}
+	}
+}
+
+#container {
+	position:relative;
+	margin-top:100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

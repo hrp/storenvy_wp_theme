@@ -31,6 +31,7 @@ require_once( 'library/bones.php' ); // if you remove this, bones will break
 	- example custom taxonomy (like tags)
 */
 require_once( 'library/custom-post-type.php' ); // you can disable this if you like
+require_once( 'library/multi-post-thumbnails.php' ); // you can disable this if you like
 /*
 3. library/admin.php
 	- removing some default WordPress dashboard widgets
@@ -48,8 +49,43 @@ require_once( 'library/custom-post-type.php' ); // you can disable this if you l
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'bones-thumb-600', 600, 150, true );
-add_image_size( 'bones-thumb-300', 300, 100, true );
+add_image_size( 'thumbnail', 200, 200, true );
+add_image_size( 'full', 650, 250, false );
+new MultiPostThumbnails(array(
+        'label' => '2nd Feature Image',
+        'id' => 'feature-image-2',
+        'post_type' => 'folio'
+        )
+    );
+
+if (class_exists('MultiPostThumbnails')) {
+    new MultiPostThumbnails(array(
+        'label' => '2nd Feature Image',
+        'id' => 'feature-image-2',
+        'post_type' => 'folio'
+        )
+    );
+    new MultiPostThumbnails(array(
+        'label' => '3rd Feature Image',
+        'id' => 'feature-image-3',
+        'post_type' => 'folio'
+        )
+    );
+    new MultiPostThumbnails(array(
+        'label' => '4th Feature Image',
+        'id' => 'feature-image-4',
+        'post_type' => 'folio'
+        )
+    );
+    new MultiPostThumbnails(array(
+        'label' => '5th Feature Image',
+        'id' => 'feature-image-5',
+        'post_type' => 'folio'
+        )
+    );     
+ 
+};
+
 /*
 to add more sizes, simply copy a line from above
 and change the dimensions & name. As long as you
@@ -154,9 +190,8 @@ function bones_comments( $comment, $args, $depth ) {
 // Search Form
 function bones_wpsearch($form) {
 	$form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-	<label class="screen-reader-text" for="s">' . __( 'Search for:', 'bonestheme' ) . '</label>
-	<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="' . esc_attr__( 'Search the Site...', 'bonestheme' ) . '" />
-	<input type="submit" id="searchsubmit" value="' . esc_attr__( 'Search' ) .'" />
+	<label class="screen-reader-text" for="s"></label>
+	<input type="text" value="' . get_search_query() . '" name="s" id="s" class="search-field" placeholder="' . esc_attr__( 'Search', 'bonestheme' ) . '" />
 	</form>';
 	return $form;
 } // don't remove this bracket!
