@@ -8,20 +8,23 @@
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
-								<div class='thumbnail'>
-									<?php if(has_post_thumbnail()){ the_post_thumbnail('thumbnail'); } ?>
-								</div>
-								<div class='body'>
-										<h5 class='category'>
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix list-view' ); ?> role="article">
+								<?php if(has_post_thumbnail()) : ?>
+									<div class='article-thumbnail'>
+										<?php the_post_thumbnail('thumbnail'); ?>
+									</div>
+								<?php endif ; ?>
+								<div class='article-body'>
+									<header class="article-header">
+										<h5 class='article-category'>
 											<?php echo get_the_category_list(', '); ?>
 										</h5>
-										<h2 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-										<p class='author'>
+										<h2 class="article-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+										<p class='article-author'>
 											By <?php echo bones_get_the_author_posts_link(); ?>
 										</p>
-
-									<section class="content clearfix">
+									</header>
+									<section class="article-content clearfix">
 										<?php the_content(); ?>
 									</section> <?php // end article section ?>
 

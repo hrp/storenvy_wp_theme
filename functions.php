@@ -106,6 +106,20 @@ You can change the names and dimensions to whatever
 you like. Enjoy!
 */
 
+
+/********************** GOOGLE FONT SUPPORT ***********/ 
+function load_googlefonts_styles() {
+    wp_enqueue_style( 'googlefonts-fjalla-one', 'http://fonts.googleapis.com/css?family=Fjalla+One' );
+    wp_enqueue_style( 'googlefonts-montserrat', 'http://fonts.googleapis.com/css?family=Montserrat' );
+}  
+add_action( 'wp_enqueue_scripts', 'load_googlefonts_styles' );
+
+
+
+
+
+
+
 /************* ACTIVE SIDEBARS ********************/
 
 // Sidebars & Widgetizes Areas
