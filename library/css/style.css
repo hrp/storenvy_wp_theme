@@ -1838,6 +1838,11 @@ be set to display none.
     display: none;
   }
 }
+.archive-title {
+  margin: 0px;
+  padding-bottom: 20px;
+  font-family: 'Montserrat';
+}
 .post {
   font-family: 'Montserrat';
   font-size: 14px;
