@@ -168,7 +168,8 @@ THEME SUPPORT
 function bones_theme_support() {
 
 	// wp thumbnails (sizes handled in functions.php)
-	add_theme_support( 'post-thumbnails' );
+  add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-excerpt' );
 
 	// default thumb size
 	set_post_thumbnail_size(125, 125, true);

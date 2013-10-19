@@ -5,10 +5,11 @@
 				<div id="inner-content" class="wrap clearfix">
 
 						<div id="main" class="eightcol first clearfix" role="main">
+							<?php echo wptuts_slider_template(); ?>
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix list-view' ); ?> role="article">
+							<?php $post_class = has_post_thumbnail() ? '' : ' no-thumbnail' ; ?>
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix list-view' . $post_class ); ?> role="article">
 								<?php if(has_post_thumbnail()) : ?>
 									<div class='article-thumbnail'>
 										<?php the_post_thumbnail('thumbnail'); ?>
@@ -16,7 +17,7 @@
 								<?php endif ; ?>
 								<div class='article-body'>
 									<header class="article-header">
-										<h5 class='article-category'>
+										<h5 class='article-category' style='margin:0px;'>
 											<?php echo get_the_category_list(', '); ?>
 										</h5>
 										<h2 class="article-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
@@ -25,12 +26,12 @@
 										</p>
 									</header>
 									<section class="article-content clearfix">
-										<?php the_content(); ?>
+										<?php the_excerpt(); ?>
+										<a class='excerpt-read-more' href=<?php echo the_permalink(); ?>>Read On</a>
 									</section> <?php // end article section ?>
 
 									<footer class="article-footer">
 										<p class="tags"><?php the_tags( '<span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?></p>
-
 									</footer> <?php // end article footer ?>
 	
 								</div>

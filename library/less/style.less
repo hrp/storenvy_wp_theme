@@ -123,12 +123,17 @@ be set to display none.
 
 
 
-article[role='article'].post {
+
+.post {
 	font-family: 'Montserrat';
 	font-size: 14px;
 	
 	a {
-		color: black;
+		color: @text-light-gray;
+		text-decoration: none;
+		&:hover {
+			color: @text-light-gray;
+		}
 	}
 
 	p {
@@ -146,6 +151,7 @@ article[role='article'].post {
 		font-size: 24px;
 		font-family: 'Fjalla One';
 		margin:0px;
+		color: @text-dark-gray;
 	}
 
 	.article-author {
@@ -175,10 +181,19 @@ article[role='article'].post {
 			padding-top:10px;
 		}
 	}
-
 	
 	// styles for list-view posts
 	&.list-view {
+		padding-bottom:20px;
+
+		&.no-thumbnail {
+			.article-body{
+				width: 600px;
+				padding-left:0px;
+			}
+
+		}
+
 		.article-thumbnail {
 			float: left;
 			width: 200px;
@@ -191,6 +206,7 @@ article[role='article'].post {
 			float: left;
 			width: 440px;
 			padding-left:20px;
+			
 			.article-category {
 				margin: 0px;
 				a {
@@ -200,10 +216,12 @@ article[role='article'].post {
 			.article-title {
 				margin:0px;
 				padding-left:5px;
+				padding-bottom:5px;
 			}
 			.article-author {
 				margin:0px;
 				padding-left:5px;
+				padding-bottom:5px;
 			}
 			.article-content {
 				margin:0px;
@@ -212,6 +230,23 @@ article[role='article'].post {
 				}
 			}
 		}	
+	}
+
+	// styles for slider view
+
+	&.slider-view {
+		
+		.article-thumbnail {
+			padding-bottom:5px;
+		}
+	
+		.article-title {
+			padding-top:5px;
+		}
+		.article-content {
+			padding-top:5px;
+		}
+
 	}
 }
 
@@ -226,7 +261,7 @@ article[role='article'].post {
 
 	.widgettitle {
 		font-size: 24px;
-		color: @green;
+		color: @se-green;
 		border-bottom: 1px solid @border-gray;
 		text-transform:uppercase;
 		font-family: 'Fjalla One';
@@ -234,10 +269,11 @@ article[role='article'].post {
 	ul {
 		list-style-image: url('../images/list-arrow.png');
 		li {
+			font-family:'Montserrat';
 			margin-left:20px;
 			margin-bottom:0px;
 			a {
-				font-family:'Montserrat';
+				font-family:inherit;
 			}
 		}
 	}
@@ -282,42 +318,37 @@ div.search {
 	margin: 0px;
 }
 
+.excerpt-read-more {
+	padding-right:15px;
+	padding-left:5px;
+	background: url('../images/list-arrow.png') right no-repeat;
+	font-family: Times;
+	font-style: italic;
+	text-decoration: none;
+}
 
+// Slider
+.flexslider {
+	padding: 20px 20px 5px;
+	background: @background-gray;
+	border: none;
+	box-shadow: none;
+	border-radius: 0px;
+	.flex-direction-nav {
+		display:none;
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	.flex-control-nav {
+		position:relative !important;
+		bottom: 0px !important;
+		a {
+			background: @text-medium-gray;
+			&.flex-active {
+				background: @se-green !important;
+			}
+		}
+	}
+}
 
 
 

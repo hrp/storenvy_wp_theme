@@ -1838,81 +1838,104 @@ be set to display none.
     display: none;
   }
 }
-article[role='article'].post {
+.post {
   font-family: 'Montserrat';
   font-size: 14px;
 }
-article[role='article'].post a {
-  color: black;
+.post a {
+  color: #8e8e8e;
+  text-decoration: none;
 }
-article[role='article'].post p {
+.post a:hover {
+  color: #8e8e8e;
+}
+.post p {
   margin: 0px;
 }
-article[role='article'].post .article-category {
+.post .article-category {
   color: #87867f;
 }
-article[role='article'].post .article-category a {
+.post .article-category a {
   background: #f7f7f7;
   padding: 5px;
 }
-article[role='article'].post .article-title {
+.post .article-title {
   font-size: 24px;
   font-family: 'Fjalla One';
   margin: 0px;
+  color: #686868;
 }
-article[role='article'].post .article-author {
+.post .article-author {
   font-style: italic;
   margin-bottom: 20px;
 }
-article[role='article'].post.single-view .article-thumbnail {
+.post.single-view .article-thumbnail {
   padding-bottom: 25px;
 }
-article[role='article'].post.single-view .social-icons {
+.post.single-view .social-icons {
   float: left;
   width: 70px;
   min-height: 100px;
 }
-article[role='article'].post.single-view .social-icons .social-icon {
+.post.single-view .social-icons .social-icon {
   width: 37px;
   height: 37px;
 }
-article[role='article'].post.single-view .article-body {
+.post.single-view .article-body {
   float: left;
   width: 570px;
   padding-top: 10px;
 }
-article[role='article'].post.list-view .article-thumbnail {
+.post.list-view {
+  padding-bottom: 20px;
+}
+.post.list-view.no-thumbnail .article-body {
+  width: 600px;
+  padding-left: 0px;
+}
+.post.list-view .article-thumbnail {
   float: left;
   width: 200px;
 }
-article[role='article'].post.list-view .article-thumbnail img {
+.post.list-view .article-thumbnail img {
   height: 200px;
   width: 200px;
 }
-article[role='article'].post.list-view .article-body {
+.post.list-view .article-body {
   float: left;
   width: 440px;
   padding-left: 20px;
 }
-article[role='article'].post.list-view .article-body .article-category {
+.post.list-view .article-body .article-category {
   margin: 0px;
 }
-article[role='article'].post.list-view .article-body .article-category a {
+.post.list-view .article-body .article-category a {
   padding: 0px 5px;
 }
-article[role='article'].post.list-view .article-body .article-title {
+.post.list-view .article-body .article-title {
   margin: 0px;
   padding-left: 5px;
+  padding-bottom: 5px;
 }
-article[role='article'].post.list-view .article-body .article-author {
+.post.list-view .article-body .article-author {
   margin: 0px;
   padding-left: 5px;
+  padding-bottom: 5px;
 }
-article[role='article'].post.list-view .article-body .article-content {
+.post.list-view .article-body .article-content {
   margin: 0px;
 }
-article[role='article'].post.list-view .article-body .article-content p {
+.post.list-view .article-body .article-content p {
   padding-left: 5px;
+}
+.post.slider-view .article-thumbnail {
+  padding-bottom: 5px;
+}
+.post.slider-view .article-title {
+  padding-top: 5px;
+}
+.post.slider-view .article-content {
+  padding-top: 5px;
 }
 .sidebar {
   margin: 0px;
@@ -1934,11 +1957,12 @@ article[role='article'].post.list-view .article-body .article-content p {
   list-style-image: url('../images/list-arrow.png');
 }
 .sidebar ul li {
+  font-family: 'Montserrat';
   margin-left: 20px;
   margin-bottom: 0px;
 }
 .sidebar ul li a {
-  font-family: 'Montserrat';
+  font-family: inherit;
 }
 .bg {
   width: 100%;
@@ -1975,4 +1999,32 @@ div.search .search-field::-webkit-input-placeholder {
 #content {
   padding: 0px 20px;
   margin: 0px;
+}
+.excerpt-read-more {
+  padding-right: 15px;
+  padding-left: 5px;
+  background: url('../images/list-arrow.png') right no-repeat;
+  font-family: Times;
+  font-style: italic;
+  text-decoration: none;
+}
+.flexslider {
+  padding: 20px 20px 5px;
+  background: #f7f7f7;
+  border: none;
+  box-shadow: none;
+  border-radius: 0px;
+}
+.flexslider .flex-direction-nav {
+  display: none;
+}
+.flexslider .flex-control-nav {
+  position: relative !important;
+  bottom: 0px !important;
+}
+.flexslider .flex-control-nav a {
+  background: #d9d9d9;
+}
+.flexslider .flex-control-nav a.flex-active {
+  background: #6fd7af !important;
 }

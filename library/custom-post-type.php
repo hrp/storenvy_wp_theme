@@ -15,33 +15,36 @@ URL: http://themble.com/bones/
 */
 
 // Flush rewrite rules for custom post types
-add_action( 'after_switch_theme', 'bones_flush_rewrite_rules' );
+add_action( 'after_switch_theme', 'se_flush_rewrite_rules' );
 
 // Flush your rewrite rules
-function bones_flush_rewrite_rules() {
+function se_flush_rewrite_rules() {
 	flush_rewrite_rules();
 }
 
 // let's create the function for the custom type
 function custom_post_example() { 
+  $labels = array(
+      'name' => __( 'Slider Posts', 'bonestheme' ), /* This is the Title of the Group */
+      'singular_name' => __( 'Slider Post', 'bonestheme' ), /* This is the individual type */
+      'all_items' => __( 'All Slider Posts', 'bonestheme' ), /* the all items menu item */
+      'add_new' => __( 'Add New', 'bonestheme' ), /* The add new menu item */
+      'add_new_item' => __( 'Add New Slider Post', 'bonestheme' ), /* Add New Display Title */
+      'edit' => __( 'Edit', 'bonestheme' ), /* Edit Dialog */
+      'edit_item' => __( 'Edit Slider Post', 'bonestheme' ), /* Edit Display Title */
+      'new_item' => __( 'New Post Slider', 'bonestheme' ), /* New Display Title */
+      'view_item' => __( 'View Post Type', 'bonestheme' ), /* View Display Title */
+      'search_items' => __( 'Search Post Type', 'bonestheme' ), /* Search Custom Type Title */ 
+      'not_found' =>  __( 'Nothing found in the Database.', 'bonestheme' ), /* This displays if there are no entries yet */ 
+      'not_found_in_trash' => __( 'Nothing found in Trash', 'bonestheme' ), /* This displays if there is nothing in the trash */
+      'parent_item_colon' => ''
+      );
+
+
 	// creating (registering) the custom type 
-	register_post_type( 'custom_type', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+	register_post_type( 'slider_post', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 	 	// let's now add all the options for this post type
-		array( 'labels' => array(
-			'name' => __( 'Custom Types', 'bonestheme' ), /* This is the Title of the Group */
-			'singular_name' => __( 'Custom Post', 'bonestheme' ), /* This is the individual type */
-			'all_items' => __( 'All Custom Posts', 'bonestheme' ), /* the all items menu item */
-			'add_new' => __( 'Add New', 'bonestheme' ), /* The add new menu item */
-			'add_new_item' => __( 'Add New Custom Type', 'bonestheme' ), /* Add New Display Title */
-			'edit' => __( 'Edit', 'bonestheme' ), /* Edit Dialog */
-			'edit_item' => __( 'Edit Post Types', 'bonestheme' ), /* Edit Display Title */
-			'new_item' => __( 'New Post Type', 'bonestheme' ), /* New Display Title */
-			'view_item' => __( 'View Post Type', 'bonestheme' ), /* View Display Title */
-			'search_items' => __( 'Search Post Type', 'bonestheme' ), /* Search Custom Type Title */ 
-			'not_found' =>  __( 'Nothing found in the Database.', 'bonestheme' ), /* This displays if there are no entries yet */ 
-			'not_found_in_trash' => __( 'Nothing found in Trash', 'bonestheme' ), /* This displays if there is nothing in the trash */
-			'parent_item_colon' => ''
-			), /* end of arrays */
+		array( 'labels' => $labels,
 			'description' => __( 'This is the example custom post type', 'bonestheme' ), /* Custom Type Description */
 			'public' => true,
 			'publicly_queryable' => true,

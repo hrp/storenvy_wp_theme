@@ -30,8 +30,14 @@ require_once( 'library/bones.php' ); // if you remove this, bones will break
 	- example custom taxonomy (like categories)
 	- example custom taxonomy (like tags)
 */
-require_once( 'library/custom-post-type.php' ); // you can disable this if you like
+// require_once( 'library/custom-post-type.php' ); // you can disable this if you like
 require_once( 'library/multi-post-thumbnails.php' ); // you can disable this if you like
+  
+// Create Slider Post Type
+require_once( 'slider_post_type.php' );
+// Create Slider
+require_once( 'slider.php' );
+
 /*
 3. library/admin.php
 	- removing some default WordPress dashboard widgets
@@ -113,7 +119,6 @@ function load_googlefonts_styles() {
     wp_enqueue_style( 'googlefonts-montserrat', 'http://fonts.googleapis.com/css?family=Montserrat' );
 }  
 add_action( 'wp_enqueue_scripts', 'load_googlefonts_styles' );
-
 
 
 
