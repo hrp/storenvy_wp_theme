@@ -40,8 +40,8 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-		
-		<img src=<?php echo get_bloginfo('template_url') . "/library/images/banner.png" ?> alt="" class='bg'>
-
+		<a href=<?php bloginfo('url') ?>>
+			<img src=<?php echo get_bloginfo('template_url') . "/library/images/banner.png" ?> alt="" class='bg'>
+		</a>
 		<div id="container">
 			

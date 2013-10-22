@@ -1859,7 +1859,6 @@ body {
 .post {
   font-family: 'Montserrat';
   font-size: 14px;
-  padding: 0px 20px 0px;
 }
 .post a {
   color: #8e8e8e;
@@ -1883,6 +1882,7 @@ body {
   font-family: 'Fjalla One';
   margin: 0px;
   color: #686868;
+  text-transform: uppercase;
 }
 .post .article-author {
   font-style: italic;
@@ -1906,7 +1906,7 @@ body {
   padding-top: 10px;
 }
 .post.list-view {
-  padding-bottom: 20px;
+  padding: 0px 20px 0px;
 }
 .post.list-view.no-thumbnail .article-body {
   width: 600px;
@@ -2062,4 +2062,67 @@ body {
 }
 .flexslider .flex-control-nav a.flex-active {
   background: #6fd7af !important;
+}
+#container-footer {
+  border-top: 1px solid #d3d3cf;
+  height: 170px;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+#container-footer ul.footer-links {
+  float: left;
+  padding-left: 50px;
+  padding-right: 10px;
+  margin-right: 30px;
+}
+#container-footer ul.footer-links.cart-links {
+  background: url('../images/cart-icon-footer.png') top left no-repeat;
+}
+#container-footer ul.footer-links.store-links {
+  background: url('../images/store-icon-footer.png') top left no-repeat;
+}
+#container-footer ul.footer-links.envy-links {
+  background: url('../images/envy-icon-footer.png') top left no-repeat;
+}
+#container-footer ul.footer-links li {
+  line-height: 2;
+  font-family: Helvetica;
+  font-weight: 200;
+}
+#container-footer ul.footer-links li a,
+#container-footer ul.footer-links li a:hover {
+  text-decoration: none;
+  color: #686868;
+}
+#container-footer ul.footer-links li .separator {
+  font-weight: 100;
+}
+footer#footer {
+  margin: 0px auto;
+  width: 1060px;
+  background: #f9f9f9;
+  bottom: 115px;
+  position: relative;
+}
+footer#footer .left {
+  float: left;
+}
+footer#footer .left p {
+  margin: 0px;
+}
+footer#footer .right {
+  float: right;
+}
+footer#footer .right .footer-links li {
+  font-family: Helvetica;
+  font-weight: 200;
+  display: inline;
+}
+footer#footer .right .footer-links li a,
+footer#footer .right .footer-links li a:hover {
+  text-decoration: none;
+  color: #686868;
+}
+footer#footer .right .footer-links li.separator {
+  font-size: 12px;
 }

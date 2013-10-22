@@ -150,7 +150,6 @@ body {
 .post {
 	font-family: 'Montserrat';
 	font-size: 14px;
-	padding:0px 20px 0px;
 	
 	a {
 		color: @text-light-gray;
@@ -176,6 +175,7 @@ body {
 		font-family: 'Fjalla One';
 		margin:0px;
 		color: @text-dark-gray;
+		text-transform:uppercase;
 	}
 
 	.article-author {
@@ -208,7 +208,7 @@ body {
 	
 	// styles for list-view posts
 	&.list-view {
-		padding-bottom:20px;
+		padding:0px 20px 0px;
 
 		&.no-thumbnail {
 			.article-body{
@@ -390,7 +390,76 @@ body {
 	}
 }
 
+// Footers
 
+#container-footer {
+	border-top:1px solid @border-gray;
+	height:170px;
+	padding-left:30px;
+	padding-top:20px;
+
+	ul.footer-links {
+		float:left;
+		padding-left:50px;
+		padding-right:10px;
+		margin-right:30px;
+
+		&.cart-links {
+			background:url('../images/cart-icon-footer.png') top left no-repeat;
+		}
+		&.store-links {
+			background:url('../images/store-icon-footer.png') top left no-repeat;
+		}
+		&.envy-links {
+			background:url('../images/envy-icon-footer.png') top left no-repeat;
+		}
+
+		li {
+			line-height:2;
+			font-family: Helvetica;
+			font-weight:200;
+			a, a:hover { 
+				text-decoration:none;
+				color:@text-dark-gray;
+			}
+			.separator {
+				font-weight:100;
+			}
+		}
+	}
+}
+
+footer#footer {
+	margin: 0px auto;
+	width:1060px;
+	background: #f9f9f9;
+	bottom:115px;
+	position:relative;
+	.left {
+		float:left;
+		p {
+			margin:0px;
+		}
+	}
+	.right{
+		float:right;
+		.footer-links {
+			li {
+				font-family: Helvetica;
+				font-weight:200;
+				display:inline;
+				a, a:hover { 
+					text-decoration:none;
+					color:@text-dark-gray;
+				}
+				&.separator {
+					font-size:12px;
+				}
+			}
+		}
+	}
+
+}
 
 
 

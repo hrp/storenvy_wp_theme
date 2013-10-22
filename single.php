@@ -2,7 +2,7 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap clearfix">
+				<div id="inner-content" class="clearfix">
 
 					<div id="main" class="eightcol first clearfix" role="main">
 
@@ -17,17 +17,17 @@
 								<div class='social-icons'>
 									<ul>
 										<li>
-											<a class='social-icon' href="https://twitter.com/Storenvy" target="_BLANK">
+											<a class='social-icon' rel="nofollow" href="http://twitter.com/home?status=<?php echo urlencode("Currently reading: "); ?><?php the_permalink(); ?>" title="Share this article with your Twitter followers">
 												<img src="<?php echo bloginfo('template_url') ?>/library/images/twitter-icon.png">
 											</a>
 										</li>
 										<li>
-											<a class='social-icon' href="http://blog.storenvy.com/" target="_BLANK">
-												<img src="<?php echo bloginfo('template_url') ?>/library/images/tumblr-icon.png">
-											</a>
-										</li>
-										<li>
-											<a class='social-icon' href="https://www.facebook.com/storenvy" target="_BLANK">
+											<a class='social-icon' href="#" onclick="
+											    window.open(
+											      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+											      'facebook-share-dialog', 
+											      'width=626,height=436'); 
+											    return false;">
 												<img src="<?php echo bloginfo('template_url') ?>/library/images/facebook-icon.png">
 											</a>
 										</li>
