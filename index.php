@@ -2,7 +2,7 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap clearfix">
+				<div id="inner-content" class=" clearfix">
 
 						<div id="main" class="eightcol first clearfix" role="main">
 							<?php echo wptuts_slider_template(); ?>
@@ -16,18 +16,16 @@
 									</div>
 								<?php endif ; ?>
 								<div class='article-body'>
-									<header class="article-header">
-										<h5 class='article-category' style='margin:0px;'>
-											<?php echo get_the_category_list(', '); ?>
-										</h5>
-										<h2 class="article-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-										<p class='article-author'>
-											By <?php echo bones_get_the_author_posts_link(); ?>
-										</p>
-									</header>
+									<h5 class='article-category' style='margin:0px;'>
+										<?php echo get_the_category_list(', '); ?>
+									</h5>
+									<h2 class="article-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+									<p class='article-author'>
+										By <?php echo bones_get_the_author_posts_link(); ?>
+									</p>
 									<section class="article-content clearfix">
 										<?php the_excerpt(); ?>
-										<a class='excerpt-read-more' href=<?php echo the_permalink(); ?>>Read On</a>
+										<a class='article-read-more' href=<?php echo the_permalink(); ?>>Read On</a>
 									</section> <?php // end article section ?>
 
 									<footer class="article-footer">

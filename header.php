@@ -42,14 +42,6 @@
 	<body <?php body_class(); ?>>
 		
 		<img src=<?php echo get_bloginfo('template_url') . "/library/images/banner.png" ?> alt="" class='bg'>
-		<div class="search">
 
-				<?php get_search_form(); ?>
-
-		</div> <?php // end search section ?>
-
-			
-			
-	
 		<div id="container">
 			
