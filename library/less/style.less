@@ -143,12 +143,25 @@ body {
 .archive-title{
 	margin:0px;
 	padding-bottom:20px;
-	font-family: 'Montserrat';
+	font-size:24px;
+	font-family: 'Fjalla One';
+	border-bottom:1px solid @border-gray;
+}
+
+#post-not-found {
+	font-family: Helvetica;
+	.article-header h1{
+		font-family: Helvetica;
+		font-size:22px;
+	}
+	.entry-content {
+		
+	}
 }
 
 // post styling
 .post {
-	font-family: 'Montserrat';
+	font-family: Helvetica;
 	font-size: 14px;
 	
 	a {
@@ -181,7 +194,14 @@ body {
 	.article-author {
 		font-style: italic;
 		margin-bottom:20px;
+		font-family: Times;
 
+	}
+
+	.article-footer {
+		.tags {
+			display:none;
+		}
 	}
 	
 	// styles for single-view posts

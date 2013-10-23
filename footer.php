@@ -46,7 +46,7 @@
 			<div id="inner-footer" class="wrap clearfix">
 				<div class='left'>
 					<img src="<?php bloginfo('template_url')?>/library/images/storenvy-logo-footer.png">
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> Storenvy Inc.</p>
 				</div>
 				<div class='right'>
 					<ul class='footer-links'>

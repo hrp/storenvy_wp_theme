@@ -10,25 +10,23 @@
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<?php $post_class = has_post_thumbnail() ? '' : ' no-thumbnail' ; ?>
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix post list-view' . $post_class ); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix list-view' . $post_class ); ?> role="article">
 								<?php if(has_post_thumbnail()) : ?>
 									<div class='article-thumbnail'>
 										<?php the_post_thumbnail('thumbnail'); ?>
 									</div>
 								<?php endif ; ?>
 								<div class='article-body'>
-									<header class="article-header">
-										<h5 class='article-category' style='margin:0px;'>
-											<?php echo get_the_category_list(', '); ?>
-										</h5>
-										<h2 class="article-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-										<p class='article-author'>
-											By <?php echo bones_get_the_author_posts_link(); ?>
-										</p>
-									</header>
+									<h5 class='article-category' style='margin:0px;'>
+										<?php echo get_the_category_list(', '); ?>
+									</h5>
+									<h2 class="article-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+									<p class='article-author'>
+										By <?php echo bones_get_the_author_posts_link(); ?>
+									</p>
 									<section class="article-content clearfix">
 										<?php the_excerpt(); ?>
-										<a class='excerpt-read-more' href=<?php echo the_permalink(); ?>>Read On</a>
+										<a class='article-read-more' href=<?php echo the_permalink(); ?>>Read On</a>
 									</section> <?php // end article section ?>
 
 									<footer class="article-footer">
@@ -58,13 +56,13 @@
 
 									<article id="post-not-found" class="hentry clearfix">
 										<header class="article-header">
-											<h1><?php _e( 'Sorry, No Results.', 'bonestheme' ); ?></h1>
+											<h1><?php _e( 'Sorry, No Results.  Please try a different search or browse by category.', 'bonestheme' ); ?></h1>
 										</header>
 										<section class="entry-content">
-											<p><?php _e( 'Try your search again.', 'bonestheme' ); ?></p>
+											
 										</section>
 										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the search.php template.', 'bonestheme' ); ?></p>
+												
 										</footer>
 									</article>
 

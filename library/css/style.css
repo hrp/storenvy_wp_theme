@@ -1854,10 +1854,19 @@ body {
 .archive-title {
   margin: 0px;
   padding-bottom: 20px;
-  font-family: 'Montserrat';
+  font-size: 24px;
+  font-family: 'Fjalla One';
+  border-bottom: 1px solid #d3d3cf;
+}
+#post-not-found {
+  font-family: Helvetica;
+}
+#post-not-found .article-header h1 {
+  font-family: Helvetica;
+  font-size: 22px;
 }
 .post {
-  font-family: 'Montserrat';
+  font-family: Helvetica;
   font-size: 14px;
 }
 .post a {
@@ -1887,6 +1896,10 @@ body {
 .post .article-author {
   font-style: italic;
   margin-bottom: 20px;
+  font-family: Times;
+}
+.post .article-footer .tags {
+  display: none;
 }
 .post.single-view .article-thumbnail {
   padding-bottom: 25px;
