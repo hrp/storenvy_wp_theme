@@ -2,9 +2,6 @@
 						
 					<ul class='social-icons'>
 						<li>
-							<img src="<?php echo bloginfo('template_url')?>/library/images/kit-icon-sm.png" alt="">
-						</li>
-						<li>
 							<a class='social-icon' href="https://www.stornevy.com" target="_BLANK">
 								<img src="<?php echo bloginfo('template_url') ?>/library/images/storenvy-icon-sm.png">
 							</a>

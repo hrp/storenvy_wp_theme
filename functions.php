@@ -56,7 +56,7 @@ require_once( 'slider.php' );
 
 // Thumbnail sizes
 add_image_size( 'thumbnail', 200, 200, true );
-add_image_size( 'full', 650, 250, false );
+add_image_size( 'full', 650, 9999, false );
 new MultiPostThumbnails(array(
         'label' => '2nd Feature Image',
         'id' => 'feature-image-2',
