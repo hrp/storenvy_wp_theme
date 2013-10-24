@@ -168,7 +168,7 @@ body {
 		color: @text-light-gray;
 		text-decoration: none;
 		&:hover {
-			color: @text-light-gray;
+			color: @se-green;
 		}
 	}
 
@@ -203,6 +203,15 @@ body {
 			display:none;
 		}
 	}
+
+	.article-content {
+		a {
+			color: @se-green;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 	
 	// styles for single-view posts
 	
@@ -223,7 +232,18 @@ body {
 			float:left;
 			width:570px;
 			padding-top:10px;
+			img {
+				display:block;
+				margin: 10px auto;
+			}
+			p {
+				margin:1em 0px;
+			}
+			.article-author {
+				margin: 0px;
+			}
 		}
+
 	}
 	
 	// styles for list-view posts

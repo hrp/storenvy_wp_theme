@@ -1874,7 +1874,7 @@ body {
   text-decoration: none;
 }
 .post a:hover {
-  color: #8e8e8e;
+  color: #6fd7af;
 }
 .post p {
   margin: 0px;
@@ -1901,6 +1901,12 @@ body {
 .post .article-footer .tags {
   display: none;
 }
+.post .article-content a {
+  color: #6fd7af;
+}
+.post .article-content a:hover {
+  text-decoration: underline;
+}
 .post.single-view .article-thumbnail {
   padding-bottom: 25px;
 }
@@ -1917,6 +1923,16 @@ body {
   float: left;
   width: 570px;
   padding-top: 10px;
+}
+.post.single-view .article-body img {
+  display: block;
+  margin: 10px auto;
+}
+.post.single-view .article-body p {
+  margin: 1em 0px;
+}
+.post.single-view .article-body .article-author {
+  margin: 0px;
 }
 .post.list-view {
   padding: 0px 20px 35px;
