@@ -1919,7 +1919,7 @@ body {
   padding-top: 10px;
 }
 .post.list-view {
-  padding: 0px 20px 0px;
+  padding: 0px 20px 35px;
 }
 .post.list-view.no-thumbnail .article-body {
   width: 600px;

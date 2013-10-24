@@ -9,11 +9,6 @@
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix single-view'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-								<?php if(has_post_thumbnail()) : ?>
-									<div class='article-thumbnail'>
-										<?php the_post_thumbnail('full'); ?>
-									</div>
-								<?php endif ; ?>
 								<div class='social-icons'>
 									<ul>
 										<li>
