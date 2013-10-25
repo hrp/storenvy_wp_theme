@@ -52,6 +52,14 @@ require_once( 'slider.php' );
 */
 // require_once( 'library/translation/translation.php' ); // this comes turned off by default
 
+// Custom Header
+$args = array(
+  'default-image' => get_template_directory_uri() . '/library/images/banner.jpg',
+  'uploads'       => true
+);
+add_theme_support( 'custom-header', $args );
+
+
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes

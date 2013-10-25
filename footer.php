@@ -36,7 +36,10 @@
 						<a href="http://www.storenvy.com/popup">SF Popup Shop</a>
 					</li>	
 				</ul>
-
+				<div class='footer-logo'>
+					<img src="<?php bloginfo('template_url')?>/library/images/storenvy-logo-footer.png">
+					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> Storenvy Inc.</p>
+				</div>
 			</div>
 
 
@@ -44,37 +47,32 @@
 		<footer id="footer" class='footer' role="contentinfo">
 
 			<div id="inner-footer" class="wrap clearfix">
-				<div class='left'>
-					<img src="<?php bloginfo('template_url')?>/library/images/storenvy-logo-footer.png">
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> Storenvy Inc.</p>
-				</div>
-				<div class='right'>
-					<ul class='footer-links'>
-						<li>
-							<a href="http://storenvy.s3.amazonaws.com/Storenvy%20Press%20Kit.zip">Press Kit</a>
-						</li>
-						<li class='separator'> · </li>
-						<li>
-							<a href="http://support.storenvy.com/customer/portal/articles/93985-terms-of-use">Terms of Service</a>
-						</li>
-						<li class='separator'> · </li>
-						<li>
-							<a href="http://support.storenvy.com/customer/portal/articles/93982-privacy-policy">Privacy Policy</a>
-						</li>
-						<li class='separator'> · </li>
-						<li>
-							<a href="http://support.storenvy.com/customer/portal/articles/485749">Creative Rights Policy</a>
-						</li>
-						<li class='separator'> · </li>
-						<li>
-							<a href="http://support.storenvy.com/customer/portal/emails/new">Contact Us</a>
-						</li>
-						<li class='separator'> · </li>
-						<li>
-							<a href="http://support.storenvy.com/">Support & FAQ</a>
-						</li>
-					</ul>
-				</div>
+
+				<ul class='footer-links'>
+					<li>
+						<a href="http://storenvy.s3.amazonaws.com/Storenvy%20Press%20Kit.zip">Press Kit</a>
+					</li>
+					<li class='separator'> · </li>
+					<li>
+						<a href="http://support.storenvy.com/customer/portal/articles/93985-terms-of-use">Terms of Service</a>
+					</li>
+					<li class='separator'> · </li>
+					<li>
+						<a href="http://support.storenvy.com/customer/portal/articles/93982-privacy-policy">Privacy Policy</a>
+					</li>
+					<li class='separator'> · </li>
+					<li>
+						<a href="http://support.storenvy.com/customer/portal/articles/485749">Creative Rights Policy</a>
+					</li>
+					<li class='separator'> · </li>
+					<li>
+						<a href="http://support.storenvy.com/customer/portal/emails/new">Contact Us</a>
+					</li>
+					<li class='separator'> · </li>
+					<li>
+						<a href="http://support.storenvy.com/">Support & FAQ</a>
+					</li>
+				</ul>
 
 			</div> <?php // end #inner-footer ?>
 

@@ -41,7 +41,7 @@
 
 	<body <?php body_class(); ?>>
 		<a href=<?php bloginfo('url') ?>>
-			<img src=<?php echo get_bloginfo('template_url') . "/library/images/banner.jpg" ?> alt="" class='bg'>
+			<img src=<?php echo header_image(); ?> alt="" class='bg'>
 		</a>
 		<div id="container">
 			

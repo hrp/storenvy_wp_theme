@@ -22,6 +22,11 @@
 							</a>
 						</li>
 						<li>
+							<a class='social-icon' href="http://www.pinterest.com/storenvy/" target="_BLANK">
+								<img src="<?php echo bloginfo('template_url') ?>/library/images/pinterest-icon-sm.png">
+							</a>
+						</li>
+						<li>
 							<a class='social-icon' href="http://instagram.com/storenvy" target="_BLANK">
 								<img src="<?php echo bloginfo('template_url') ?>/library/images/instagram-icon-sm.png">
 							</a>

@@ -2021,7 +2021,7 @@ body {
 }
 .sidebar .social-icons li {
   margin: 0px;
-  padding-left: 23px;
+  padding-left: 15px;
   display: inline;
 }
 .bg {
@@ -2068,7 +2068,7 @@ body {
   font-family: Times;
   font-style: italic;
   text-decoration: none;
-  color: #8e8e8e;
+  color: #8e8e8e !important;
 }
 .flexslider {
   padding: 20px 20px 5px;
@@ -2127,33 +2127,29 @@ body {
 #container-footer ul.footer-links li .separator {
   font-weight: 100;
 }
+#container-footer .footer-logo {
+  padding: 20px;
+  padding-left: 100px;
+}
 footer#footer {
   margin: 0px auto;
   width: 1060px;
   background: #f9f9f9;
   bottom: 115px;
   position: relative;
+  text-align: center;
 }
-footer#footer .left {
-  float: left;
-}
-footer#footer .left p {
-  margin: 0px;
-}
-footer#footer .right {
-  float: right;
-}
-footer#footer .right .footer-links li {
+footer#footer .footer-links li {
   font-family: Helvetica;
   font-weight: 200;
   display: inline;
 }
-footer#footer .right .footer-links li a,
-footer#footer .right .footer-links li a:hover {
+footer#footer .footer-links li a,
+footer#footer .footer-links li a:hover {
   text-decoration: none;
   color: #686868;
 }
-footer#footer .right .footer-links li.separator {
+footer#footer .footer-links li.separator {
   font-size: 12px;
 }
 .pagination {

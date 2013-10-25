@@ -350,7 +350,7 @@ body {
 		margin: 0px;
 		li {
 			margin: 0px;
-			padding-left: 23px;
+			padding-left: 15px;
 			display:inline;
 		}
 	}
@@ -403,7 +403,7 @@ body {
 	font-family: Times;
 	font-style: italic;
 	text-decoration: none;
-	color: @text-light-gray;
+	color: @text-light-gray !important;
 }
 
 // Slider
@@ -468,6 +468,11 @@ body {
 			}
 		}
 	}
+
+	.footer-logo {
+		padding: 20px;
+		padding-left: 100px;
+	}
 }
 
 footer#footer {
@@ -476,26 +481,18 @@ footer#footer {
 	background: #f9f9f9;
 	bottom:115px;
 	position:relative;
-	.left {
-		float:left;
-		p {
-			margin:0px;
-		}
-	}
-	.right{
-		float:right;
-		.footer-links {
-			li {
-				font-family: Helvetica;
-				font-weight:200;
-				display:inline;
-				a, a:hover { 
-					text-decoration:none;
-					color:@text-dark-gray;
-				}
-				&.separator {
-					font-size:12px;
-				}
+	text-align:center;
+	.footer-links {
+		li {
+			font-family: Helvetica;
+			font-weight:200;
+			display:inline;
+			a, a:hover { 
+				text-decoration:none;
+				color:@text-dark-gray;
+			}
+			&.separator {
+				font-size:12px;
 			}
 		}
 	}
