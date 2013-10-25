@@ -36,7 +36,7 @@
 										</p>
 									</header> <?php // end article header ?>
 
-									<section class="entry-content clearfix" itemprop="articleBody">
+									<section class="article-content clearfix" itemprop="articleBody">
 										<?php the_content(); ?>
 									</section> <?php // end article section ?>
 
