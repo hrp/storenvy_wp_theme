@@ -403,6 +403,7 @@ body {
 	font-family: Times;
 	font-style: italic;
 	text-decoration: none;
+	color: @text-light-gray;
 }
 
 // Slider
@@ -496,6 +497,26 @@ footer#footer {
 					font-size:12px;
 				}
 			}
+		}
+	}
+
+}
+
+.pagination {
+	text-align:center;
+	ul {
+	}
+	
+	li {
+		display:inline;
+	}
+
+	.page-numbers {
+		font-size: 18px;
+		color: @text-dark-gray;
+		text-decoration: none;
+		&:hover, &.current {
+			color: @se-green;
 		}
 	}
 

@@ -2068,6 +2068,7 @@ body {
   font-family: Times;
   font-style: italic;
   text-decoration: none;
+  color: #8e8e8e;
 }
 .flexslider {
   padding: 20px 20px 5px;
@@ -2154,4 +2155,19 @@ footer#footer .right .footer-links li a:hover {
 }
 footer#footer .right .footer-links li.separator {
   font-size: 12px;
+}
+.pagination {
+  text-align: center;
+}
+.pagination li {
+  display: inline;
+}
+.pagination .page-numbers {
+  font-size: 18px;
+  color: #686868;
+  text-decoration: none;
+}
+.pagination .page-numbers:hover,
+.pagination .page-numbers.current {
+  color: #6fd7af;
 }
