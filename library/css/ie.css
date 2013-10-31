@@ -342,6 +342,20 @@ check your menus here. do they look good?
 do they need tweaking?
 */
 /* end .footer-links */
+.post.list-view .article-thumbnail {
+  float: left;
+  margin-left: 0;
+  width: 30.4414%;
+}
+.post.list-view .article-thumbnail img {
+  height: auto;
+  width: 100%;
+}
+.post.list-view .article-body {
+  float: right;
+  width: 63.165906%;
+  clear: none;
+}
 /* import grid */
 /******************************************************************
 Site Name:
