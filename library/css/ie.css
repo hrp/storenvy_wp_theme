@@ -356,6 +356,12 @@ do they need tweaking?
   width: 63.165906%;
   clear: none;
 }
+#header-logo {
+  display: block;
+  width: 395px;
+  height: 94px;
+  background: url('../images/logo.png') 0 0 no-repeat;
+}
 /* import grid */
 /******************************************************************
 Site Name:
