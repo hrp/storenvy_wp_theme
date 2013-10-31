@@ -2,7 +2,7 @@
 
 			<div id="content">
 
-				<div id="inner-content" class=" clearfix">
+				<div id="inner-content" class="clearfix">
 
 						<div id="main" class="eightcol first clearfix" role="main">
 							<?php echo wptuts_slider_template(); ?>
