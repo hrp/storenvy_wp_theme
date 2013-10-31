@@ -43,5 +43,8 @@
 		<a href=<?php bloginfo('url') ?> class="bg-wrap">
 			<img src=<?php echo header_image(); ?> alt="" class='bg'>
 		</a>
-		<h1 id="header-logo">Storenvy Store Owner Inspiration &amp; Resources</h1>
+		<a href=<?php bloginfo('url') ?>>
+			<h1 id="header-logo">Storenvy Store Owner Inspiration &amp; Resources</h1>
+		</a>
 		<div id="container">
+
