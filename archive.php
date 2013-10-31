@@ -2,7 +2,7 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap clearfix">
+				<div id="inner-content" class="clearfix">
 
 						<div id="main" class="eightcol first clearfix" role="main">
 
@@ -42,29 +42,33 @@
 							<?php } ?>
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<?php $post_class = has_post_thumbnail() ? '' : ' no-thumbnail' ; ?>
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix list-view' . $post_class ); ?> role="article">
+								<?php if(has_post_thumbnail()) : ?>
+									<div class='article-thumbnail'>
+										<?php the_post_thumbnail('thumbnail'); ?>
+									</div>
+								<?php endif ; ?>
+								<div class='article-body'>
+									<h5 class='article-category' style='margin:0px;'>
+										<?php echo get_the_category_list(', '); ?>
+									</h5>
+									<h2 class="article-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+									<p class='article-author'>
+										By <?php echo bones_get_the_author_posts_link(); ?>
+									</p>
+									<section class="article-content clearfix">
+										<?php the_excerpt(); ?>
+										<a class='article-read-more' href=<?php echo the_permalink(); ?>>Read On</a>
+									</section> <?php // end article section ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
-
-								<header class="article-header">
-
-									<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-									<p class="byline vcard"><?php
-										printf(__( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(__( 'F jS, Y', 'bonestheme' )), bones_get_the_author_posts_link(), get_the_category_list(', '));
-									?></p>
-
-								</header> <?php // end article header ?>
-
-								<section class="entry-content clearfix">
-
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-
-									<?php the_excerpt(); ?>
-
-								</section> <?php // end article section ?>
-
-								<footer class="article-footer">
-
-								</footer> <?php // end article footer ?>
+									<footer class="article-footer">
+										<p class="tags"><?php the_tags( '<span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?></p>
+									</footer> <?php // end article footer ?>
+	
+								</div>
+								
+								<?php // comments_template(); // uncomment if you want to use them ?>
 
 							</article> <?php // end article ?>
 
@@ -101,7 +105,7 @@
 
 						<?php get_sidebar(); ?>
 
-								</div> <?php // end #inner-content ?>
+				</div> <?php // end #inner-content ?>
 
 			</div> <?php // end #content ?>
 
