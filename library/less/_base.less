@@ -436,6 +436,58 @@ and more scalable.
 		.size-medium {}
 		.size-thumbnail {}
 
+
+// styles for list-view posts
+.list.list-view {
+	padding:0px 20px 35px;
+
+	&.no-thumbnail {
+		.article-body{
+			width: 100%;
+			padding-left:0px;
+		}
+
+	}
+
+	.article-thumbnail {
+		float: left;
+		width: 100%;
+		img {
+			max-width:200px;
+			height: auto;
+			width: 100%;
+		}
+	}
+	.article-body {
+		float: left;
+		clear:left;
+		width: 100%;
+		
+		.article-category {
+			margin: 0px;
+			a {
+				padding: 0px 5px;
+			}
+		}
+		.article-title {
+			margin:0px;
+			padding-left:5px;
+			padding-bottom:5px;
+		}
+		.article-author {
+			margin:0px;
+			padding-left:5px;
+			padding-bottom:5px;
+		}
+		.article-content {
+			margin:0px;
+			p {
+				padding-left:5px;
+			}
+		}
+	}	
+}
+
 /******************************************************************
 09. PAGE NAVI STYLES
 ******************************************************************/
