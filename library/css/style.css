@@ -2015,6 +2015,10 @@ body {
   margin: 1em 0px;
   max-width: 100%;
 }
+.post.single-view .article-body ul {
+  padding-left:25px;
+  list-style-type:disc;
+}
 .post.single-view .article-body .article-author {
   margin: 0px;
 }
