@@ -2009,6 +2009,7 @@ body {
   display: block;
   margin: 10px auto;
   max-width: 100%;
+  height:auto;
 }
 .post.single-view .article-body p {
   margin: 1em 0px;
