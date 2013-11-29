@@ -1065,7 +1065,7 @@ and more scalable.
 /* end .gallery */
 /* gallery caption styles */
 .post.list-view {
-  padding: 0px 20px 35px;
+  padding: 0px 20px 35px 0;
 }
 .post.list-view.no-thumbnail .article-body {
   width: 100%;
@@ -1989,12 +1989,19 @@ body {
 }
 .post.single-view .social-icons {
   float: left;
-  width: 70px;
-  min-height: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 100%;
 }
+.post.single-view .social-icons ul{
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+
+.post.single-view .social-icons ul li{
+  margin-right:15px;
+  float:left;
+}
+
 .post.single-view .social-icons .social-icon {
   width: 37px;
   height: 37px;
@@ -2002,7 +2009,6 @@ body {
 .post.single-view .article-body {
   float: left;
   width: 100%;
-  padding-left: 55px;
   padding-top: 10px;
 }
 .post.single-view .article-body img {
